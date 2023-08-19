@@ -1,7 +1,5 @@
 package supermarket;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -13,6 +11,7 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.Connection;
@@ -30,7 +29,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.ImageIcon;
 
-public class Category extends JFrame implements ActionListener, MouseListener {
+public class Category extends JFrame implements ActionListener, MouseListener, WindowListener {
 
 	private JPanel contentPane, panel;
 	 JTextField categoryID;
@@ -70,6 +69,7 @@ public class Category extends JFrame implements ActionListener, MouseListener {
 		setTitle("Bedrock Mart Retail POS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 950, 542);
+		addWindowListener(this);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 128, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -306,5 +306,46 @@ public class Category extends JFrame implements ActionListener, MouseListener {
 	public void mouseExited(MouseEvent e) {
 		// Not Implemented
 
+	}
+	@Override
+	public void windowClosing(WindowEvent e) {
+		 int n = JOptionPane.showConfirmDialog(null, "Do you want to close this window?", "Confirmation",
+					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+			
+			if (n == JOptionPane.YES_OPTION) {
+				dispose();
+			}
+		
+		
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// Not implemented
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// Not implemented
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// Not implemented
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// Not implemented
+		
 	}
 }
