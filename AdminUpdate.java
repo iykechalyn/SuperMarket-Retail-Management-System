@@ -12,6 +12,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -19,7 +21,7 @@ import java.sql.Statement;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
 
-public class AdminUpdate extends JFrame implements ActionListener {
+public class AdminUpdate extends JFrame implements ActionListener, WindowListener {
 
 	private JPanel LogincontentPanel, rightpanel, Leftpanel;
 	private JLabel bedrockLogoPanelLeft;
