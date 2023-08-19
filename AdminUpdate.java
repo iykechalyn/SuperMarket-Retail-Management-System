@@ -62,7 +62,7 @@ public class AdminUpdate extends JFrame implements ActionListener, WindowListene
 
 		setTitle("Bedrock Mart Retail POS");
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 631, 435);
 		LogincontentPanel = new JPanel();
 		LogincontentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
