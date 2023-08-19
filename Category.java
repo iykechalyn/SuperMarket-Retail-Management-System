@@ -67,7 +67,7 @@ public class Category extends JFrame implements ActionListener, MouseListener, W
 		}
 
 		setTitle("Bedrock Mart Retail POS");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 950, 542);
 		addWindowListener(this);
 		contentPane = new JPanel();
