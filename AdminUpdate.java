@@ -162,4 +162,45 @@ public class AdminUpdate extends JFrame implements ActionListener, WindowListene
 		}
 
 	}
+	@Override
+	public void windowClosing(WindowEvent e) {
+		 int n = JOptionPane.showConfirmDialog(null, "Do you want to close this window?", "Confirmation",
+					JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+			
+			if (n == JOptionPane.YES_OPTION) {
+				dispose();
+			}
+		
+		
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// Not implemented
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// Not implemented
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// Not implemented
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// Not implemented
+		
+	}
 }
